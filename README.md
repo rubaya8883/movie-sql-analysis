@@ -19,51 +19,15 @@ This project explores and analyzes a movie dataset using both **Python (Pandas)*
 ## 🧼 Step 1: Data Cleaning (Python & Pandas)
 
 Key cleaning steps included:
-- Understanding the whole dataset.
-- Finding missing values for each columns.
-- Checking duplicates and standardizing column names.
-- Droping rows where more than 6 columns contains null values.
-- Filling missing values with 'unknown' for director, cast and genre column.
-- Replacing null values for time_minute column with 60 minutes.
-- Analyzing missing values of votes, box_office_collection, rating, metascore column using descriptive statistics method.
-- Handling missing values of votes, box_office_collection, rating, metascore column using median values by genre.
 
----
-
-🧾 Dataset Column Descriptions (BoxOfficeCollections_cleaned.csv)
-
-<details>
-<summary>📄 <strong>Click to view dataset details and column descriptions</strong></summary>
-
-## 🧾 Column Descriptions (`BoxOfficeCollections_cleaned.csv`)
-
-| Column Name             | Description                                                                 |
-|-------------------------|-----------------------------------------------------------------------------|
-| `movie`                 | Title of the movie                                                          |
-| `year`                  | Release year of the movie                                                   |
-| `score`                 | Original critic score (e.g., Rotten Tomatoes or similar, on a 0–100 scale)  |
-| `adjusted_score`        | Weighted or normalized version of `score`                                   |
-| `director`              | Director of the movie                                                       |
-| `cast`                  | Main cast members (comma-separated)                                         |
-| `consensus`             | Brief plot summary or critic consensus                                      |
-| `box_office_collection` | Total worldwide box office earnings in USD                                  |
-| `imdb_genre`            | Primary genre listed on IMDb (e.g., Comedy, Action)                         |
-| `imdb_rating`           | IMDb rating (scale: 0–10)                                                   |
-| `metascore`             | Metacritic score (0–100)                                                    |
-| `time_minute`           | Runtime of the movie in minutes                                             |
-| `votes`                 | Total number of IMDb user votes                                             |
-
----
-
-### 🧪 Sample Preview
-
-| movie              | year | score | adjusted_score | imdb_rating | box_office_collection |
-|--------------------|------|-------|----------------|-------------|------------------------|
-| Hot Rod            | 2007 | 39    | 42.918         | 6.7         | 14,371,564             |
-| Game Night         | 2018 | 85    | 99.838         | 6.9         | 117,378,084            |
-| The First Wives... | 1996 | 49    | 53.174         | 6.4         | 181,489,203            |
-
-</details>
+- Gaining an initial understanding of the dataset structure and value types  
+- Identifying missing values across all columns  
+- Detecting and removing duplicate rows; standardizing column names for consistency  
+- Dropping rows where more than 6 columns contained null values  
+- Filling missing values with `'Unknown'` for the `director`, `cast`, and `imdb_genre` columns  
+- Replacing null values in the `time_minute` column with a default runtime of **60 minutes**  
+- Analyzing missing values in the `votes`, `box_office_collection`, `imdb_rating`, and `metascore` columns using descriptive statistics  
+- Filling those numerical missing values using **median values grouped by genre**
 
 ---
 
@@ -101,7 +65,7 @@ Bar charts and line graphs were created using `matplotlib` and `pandas` to visua
 ## 💡 Key Learning & Purpose
 
 The project was built as part of my portfolio to showcase:
-- Data wrangling skills in Pandas
+- Proficiency in data wrangling and preprocessing with Pandas 
 - Ability to build and query a SQL database
 - Data storytelling using Python and SQL
 - Preparing datasets for real-world analytics scenarios
@@ -112,6 +76,41 @@ The project was built as part of my portfolio to showcase:
 
 - Expand to a multi-table relational project (e.g., including actors, directors)
 - Add more complex joins, aggregations, and visualizations
+
+---
+
+## 🧾 Dataset Overview
+
+<details>
+<summary>📄 <strong>Click to view dataset details and column descriptions</strong></summary>
+
+### Column Descriptions (`BoxOfficeCollections_cleaned.csv`)
+
+| Column Name             | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `movie`                 | Title of the movie                                                          |
+| `year`                  | Release year of the movie                                                   |
+| `score`                 | Original critic score (e.g., Rotten Tomatoes or similar, on a 0–100 scale)  |
+| `adjusted_score`        | Weighted or normalized version of `score`                                   |
+| `director`              | Director of the movie                                                       |
+| `cast`                  | Main cast members (comma-separated)                                         |
+| `consensus`             | Brief plot summary or critic consensus                                      |
+| `box_office_collection` | Total worldwide box office earnings in USD                                  |
+| `imdb_genre`            | Primary genre listed on IMDb (e.g., Comedy, Action)                         |
+| `imdb_rating`           | IMDb rating (scale: 0–10)                                                   |
+| `metascore`             | Metacritic score (0–100)                                                    |
+| `time_minute`           | Runtime of the movie in minutes                                             |
+| `votes`                 | Total number of IMDb user votes                                             |
+
+### 🧪 Sample Preview
+
+| movie              | year | score | imdb_rating | box_office_collection |
+|--------------------|------|-------|-------------|------------------------|
+| Hot Rod            | 2007 | 39    | 6.7         | 14,371,564             |
+| Game Night         | 2018 | 85    | 6.9         | 117,378,084            |
+| The First Wives... | 1996 | 49    | 6.4         | 181,489,203            |
+
+</details>
 
 ---
 
