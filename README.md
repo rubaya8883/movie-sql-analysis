@@ -33,13 +33,36 @@ Key cleaning steps included:
 
 ## 🧠 Step 2: SQL Analysis
 
-Using SQL queries in Python to explore:
-- Top-rated movies by IMDb score
-- Revenue trends across genres
-- Count of movies per year
-- Average IMDb Rating by Year
-- Low-rated but high-earning movies — Identifies movies with IMDb rating < 6.0 but earned over $100M worldwide
-- Top genres by movie count — Shows which genres are most represented in the dataset
+The cleaned data was loaded into a SQLite database (named- 'IMDB_box_office.db') and queried using SQL via Python (`sqlite3` + `pandas`). Below are the key analyses performed:
+
+- ⭐ **Top-rated movies by IMDb score**  
+  Extracted top 10 movies with the highest IMDb ratings.  
+  ➤ Notable titles: *12 Angry Men*, *The Dark Knight*
+  ![Top Rated Movies](images/top_10_imdb_rated.png)
+  
+- 💰 **Revenue trends across genres**  
+  Grouped by `imdb_genre` to calculate average box office revenue.  
+  ➤ Sci-Fi and Adventure genres had the highest average collections.
+  ![Revenue by Genre](images/avg_revenue_by_genre.png)
+  
+- 📅 **Count of movies per year**  
+  Showed number of movies released each year.  
+  ➤ Peak movie releases around 2016–2019.
+
+- 📈 **Average IMDb Rating by Year**  
+  Observed fluctuations in average IMDb ratings over the years, with a slight increase around 2020 followed by a mild decline  
+   ![Rating Trend](images/avg_imdb_rating_by_year.png)
+  
+- ⚖️ **Low-rated but high-earning movies**  
+  Queried movies with IMDb rating < 6 but earned > $100M.  
+  ➤ Highlights commercially successful films that received low critical ratings, possibly due to strong branding or fan following.
+
+- 🎭 **Top genres by movie count**  
+  Displayed the most represented genres in the dataset.  
+  ➤ Comedy and Drama genres were most frequent.  
+
+> All queries and charts are executed in [`sql_analysis.ipynb`](./sql_analysis.ipynb)
+
 
 ---
 
