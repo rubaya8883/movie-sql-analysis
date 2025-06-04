@@ -37,17 +37,15 @@ Using SQL queries in Python to explore:
 - Top-rated movies by IMDb score
 - Revenue trends across genres
 - Count of movies per year
-- Movies with low rating but high revenue
-- Correlation patterns (e.g., rating vs. revenue)
+- Average IMDb Rating by Year
+- Low-rated but high-earning movies — Identifies movies with IMDb rating < 6.0 but earned over $100M worldwide
+- Top genres by movie count — Shows which genres are most represented in the dataset
 
 ---
 
 ## 📊 Visualizations
 
-Bar charts and line graphs were created using `matplotlib` and `pandas` to visualize:
-- Top 10 movies by IMDb rating
-- Box office collection trends by genre
-- Average rating per release year
+Bar charts and line graphs were created using SQL + Pandas + Matplotlib to support each query insight.
 
 ---
 
